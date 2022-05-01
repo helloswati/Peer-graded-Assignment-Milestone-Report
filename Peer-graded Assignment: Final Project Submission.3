@@ -1,0 +1,56 @@
+---
+title: "Final Project Submission"
+author: "Swati"
+date: "2022-5-1"
+output: slidy_presentation
+---
+
+**Capstone: Prediction of the next word**
+
+***Introduction***
+
+The goal of this exercise is to create a product to highlight the prediction algorithm that you have built and to provide an interface that can be accessed by others. For this project you must submit:
+
+A Shiny app that takes as input a phrase (multiple words) in a text box input and outputs a prediction of the next word.
+
+A slide deck consisting of no more than 5 slides created with R Studio Presenter (<https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations>) pitching your algorithm and app as if you were presenting to your boss or an investor.
+
+**Summary of Project Steps**
+
+-   Loading Libraries - First step of the project is to load all the libraries necessary to complete all the tasks outlined in the introduction.
+
+-   Loading Data - The data used in this project downloaded from Coursera-SwiftKey dataset including News and Twitter examples to feed the model
+
+-   Creating a Data Sample - The sample datasets consists 0f 411197 wordcount in total.
+
+-   Cleaning Data - Convert all text to lowercase, remove all punctuation, numbers, whitespace and "english" stop words
+
+-   Creating the corresponding n-gram frequencies
+
+-   Saving n-grams as .rds files
+
+***Algorimth***
+
+-   N-gram model used ( from 1 to 4 n-gram )
+
+-   If no match is found in any of the 4 n-grams, the algorimth indicates that the sample is too small
+
+-   Stupid back-off strategy implemended
+
+-   Create ngram models feeded with the generated Corpus
+
+-   Use ngram models to predict the next word
+
+**Shiny App - How it works**
+
+-   User inputs a word into the app interface
+
+-   The app then checks the word against the prediction algorithm
+
+-   The next word is proactively predicted
+
+-   This prediction is based from longest to shortest N-gram frequency
+
+-   Prediction is displayed
+
+-   The Shiny app provided: <http://127.0.0.1:4375>
